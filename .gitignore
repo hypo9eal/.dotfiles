@@ -1,0 +1,6 @@
+# atom
+.atom/.apm
+.atom/.node-gyp
+.atom/complie-cache
+.atom/packages
+.atom/storage

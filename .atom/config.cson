@@ -1,0 +1,28 @@
+"*":
+  core:
+    themes: [
+      "one-dark-ui"
+      "robin-hood-syntax"
+    ]
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  emmet: {}
+  "exception-reporting":
+    userId: "87479045-00dd-f4a7-c9fe-8272708e54e7"
+  linter: {}
+  "linter-eslint": {}
+  "linter-htmlhint": {}
+  "linter-scss-lint": {}
+  livereload: {}
+  minimap: {}
+  "one-dark-ui": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  welcome:
+    showOnStartup: false
