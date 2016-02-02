@@ -7,6 +7,10 @@ git clone git@github.com:hypo9eal/.dotfiles.git ${DOTFILES_ROOT} --recursive
 ### IFTTT dash
 bash <(curl -fsSL https://raw.githubusercontent.com/IFTTT/dash/master/bin/bootstrap)
 
+### anyenv
+git clone https://github.com/riywo/anyenv ~/.anyenv
+anyenv install ndenv
+
 ### zprezto
 zsh
 
