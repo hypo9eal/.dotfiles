@@ -22,6 +22,7 @@ done
 ln -s ${DOTFILES_ROOT}/.zprezto ~/.zprezto
 mv ~/.zprofile ~/.zprofile.bk
 ln -s ${DOTFILES_ROOT}/.zprofile ~/.zprofile
+ln -s ${DOTFILES_ROOT}/.zpreztorc ~/.zpreztorc
 
 chsh -s /bin/zsh
 source ~/.zprofile
