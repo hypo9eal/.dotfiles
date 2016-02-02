@@ -73,17 +73,21 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
+# IFTTT dash
+export PATH=$PATH:/usr/local/dev-env/bin
+
 # homebrew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # anyenv
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/anyenv/bin
+export PATH=$PATH:/usr/local/var/anyenv/bin
 export ANYENV_ROOT=/usr/local/var/anyenv/
-eval ""
+eval "$(anyenv init -)"
 
 #ndenv
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/anyenv/envs/ndenv/shims/npm
+export PATH=$PATH:/usr/local/var/anyenv/envs/ndenv/shims/npm
 
 # nodebrew
-#export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/nodebrew/current/bin
+#export PATH=$PATH:/usr/local/var/nodebrew/current/bin
 #export NODEBREW_ROOT=/usr/local/var/nodebrew
+

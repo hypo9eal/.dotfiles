@@ -4,9 +4,8 @@ DOTFILES_ROOT=~/.dotfiles
 ### dotfiles
 git clone git@github.com:hypo9eal/.dotfiles.git ${DOTFILES_ROOT} --recursive
 
-ln -s ${DOTFILES_ROOT}/.atom ~/.atom
-ln -s ${DOTFILES_ROOT}/.vimrc ~/.vimrc
-ln -s ${DOTFILES_ROOT}/.gitconfig ~/.gitconfig
+### IFTTT dash
+bash <(curl -fsSL https://raw.githubusercontent.com/IFTTT/dash/master/bin/bootstrap)
 
 ### zprezto
 zsh
@@ -17,27 +16,14 @@ for rcfile in ${DOTFILES_ROOT}/.zprezto/runcoms/^README.md(.N); do
 done
 
 ln -s ${DOTFILES_ROOT}/.zprezto ~/.zprezto
-
 mv ~/.zprofile ~/.zprofile.bk
 ln -s ${DOTFILES_ROOT}/.zprofile ~/.zprofile
 
 chsh -s /bin/zsh
+source ~/.zprofile
 
-### env
-cat << EOS >> ~/.zprofile
+### symbolic link
 
-# homebrew cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# anyenv
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/anyenv/bin
-export ANYENV_ROOT=/usr/local/var/anyenv/
-eval ""
-
-#ndenv
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/anyenv/envs/ndenv/shims/npm
-
-# nodebrew
-#export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/nodebrew/current/bin
-#export NODEBREW_ROOT=/usr/local/var/nodebrew
-EOS
+ln -s ${DOTFILES_ROOT}/.atom ~/.atom
+ln -s ${DOTFILES_ROOT}/.vimrc ~/.vimrc
+ln -s ${DOTFILES_ROOT}/.gitconfig ~/.gitconfig
