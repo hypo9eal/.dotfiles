@@ -1,25 +1,40 @@
-# zprezto
+### vars
+DOTFILES_ROOT=~/.dotfiles
+
+### dotfiles
+git clone git@github.com:hypo9eal/.dotfiles.git ${DOTFILES_ROOT}  --recursive
+
+ln -s ${DOTFILES_ROOT}/.atom ~/.atom
+ln -s ${DOTFILES_ROOT}/.vimrc ~/.vimrc
+ln -s ${DOTFILES_ROOT}/.gitconfig ~/.gitconfig
+
+### zprezto
 zsh
 
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
 setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+for rcfile in ${DOTFILES_ROOT}/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
+ln -s ${DOTFILES_ROOT}/.zprezto ~/.zprezto
+
 chsh -s /bin/zsh
 
-ln -s ~/.dotfiles/.zprezto/runcoms/zlogin .zlogin
-ln -s ~/.dotfiles/.zprezto/runcoms/zlogout .zlogout
-ln -s ~/.dotfiles/.zprezto/runcoms/zpreztorc .zpreztorc
-ln -s ~/.dotfiles/.zprezto/runcoms/zprofile .zprofile
-ln -s ~/.dotfiles/.zprezto/runcoms/zshenv .zshenv
-ln -s ~/.dotfiles/.zprezto/runcoms/zshrc .zshrc
+### env
+cat << EOS >> ~/.zprofile
 
-# dotfiles
-git clone git@github.com:hypo9eal/.dotfiles.git ~/.dotfiles  --recursive
+# homebrew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-ln -s ~/.dotfiles/.atom ~/.atom
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+# anyenv
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/anyenv/bin
+export ANYENV_ROOT=/usr/local/var/anyenv/
+eval ""
+
+#ndenv
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/anyenv/envs/ndenv/shims/npm
+
+# nodebrew
+#export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/nodebrew/current/bin
+#export NODEBREW_ROOT=/usr/local/var/nodebrew
+EOS
