@@ -2,7 +2,7 @@
 DOTFILES_ROOT=~/.dotfiles
 
 ### dotfiles
-git clone git@github.com:hypo9eal/.dotfiles.git ${DOTFILES_ROOT}  --recursive
+git clone git@github.com:hypo9eal/.dotfiles.git ${DOTFILES_ROOT} --recursive
 
 ln -s ${DOTFILES_ROOT}/.atom ~/.atom
 ln -s ${DOTFILES_ROOT}/.vimrc ~/.vimrc
@@ -17,6 +17,9 @@ for rcfile in ${DOTFILES_ROOT}/.zprezto/runcoms/^README.md(.N); do
 done
 
 ln -s ${DOTFILES_ROOT}/.zprezto ~/.zprezto
+
+mv ~/.zprofile ~/.zprofile.bk
+ln -s ${DOTFILES_ROOT}/.zprofile ~/.zprofile
 
 chsh -s /bin/zsh
 
