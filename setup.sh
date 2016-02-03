@@ -27,9 +27,11 @@ for rcfile in ${DOTFILES_ROOT}/.zprezto/runcoms/^README.md(.N); do
 done
 
 ln -s ${DOTFILES_ROOT}/.zprezto ~/.zprezto
+ln -s ${DOTFILES_ROOT}/.zpreztorc ~/.zpreztorc
 mv ~/.zprofile ~/.zprofile.bk
 ln -s ${DOTFILES_ROOT}/.zprofile ~/.zprofile
-ln -s ${DOTFILES_ROOT}/.zpreztorc ~/.zpreztorc
+mv ~/.zshrc ~/.zshrc.bk
+ln -s ${DOTFILES_ROOT}/.zshrc ~/.zshrc
 
 echo "activate zsh..."
 chsh -s /bin/zsh
