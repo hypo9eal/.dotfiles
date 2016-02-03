@@ -87,7 +87,3 @@ eval "$(anyenv init -)"
 #ndenv
 export PATH=$PATH:/usr/local/var/anyenv/envs/ndenv/shims/npm
 
-# nodebrew
-#export PATH=$PATH:/usr/local/var/nodebrew/current/bin
-#export NODEBREW_ROOT=/usr/local/var/nodebrew
-
