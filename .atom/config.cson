@@ -4,6 +4,8 @@
       "one-dark-ui"
       "robin-hood-syntax"
     ]
+  docblockr:
+    align_tags: "shallow"
   editor:
     invisibles: {}
     showIndentGuide: true
@@ -24,5 +26,6 @@
     hideVcsIgnoredFiles: true
   "vim-mode":
     useClipboardAsDefaultRegister: true
+  "vim-surround": {}
   welcome:
     showOnStartup: false
