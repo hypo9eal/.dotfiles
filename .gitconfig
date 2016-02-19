@@ -7,7 +7,7 @@
 	path = 
 
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
 [user]
@@ -26,6 +26,7 @@
 
 [color]
   ui = always
+
 [color "diff"]
   meta = yellow bold
   commit = green bold
@@ -33,11 +34,13 @@
   old = red bold
   new = green bold
   whitespace = red reverse
+
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = "red bold 52"
   newNormal = "green bold"
   newHighlight = "green bold 22"
+
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -46,3 +49,8 @@
   added = yellow
   changed = green
   untracked = cyan
+
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
