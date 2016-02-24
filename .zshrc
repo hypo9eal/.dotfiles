@@ -14,3 +14,6 @@ fi
 
 # update homebrew, homebrew cask, apm, npm, gem
 alias update="sh ~/.dotfiles/update.sh"
+
+# curl
+alias curlj='curl -H "Accept: application/json" -H "Content-type: application/json"'
