@@ -49,3 +49,6 @@ ln -s ${DOTFILES_ROOT}/.atom ~/.atom
 
 echo ">> symbolic link /usr/local/share/git-core/contrib/diff-highlight/diff-highlight -> /usr/local/bin"
 ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin
+
+echo ">> symbolic link ~/.dotfiles/.iterm -> ~/iterm"
+ln -s ~/.dotfiles/.iterm ~/iterm
