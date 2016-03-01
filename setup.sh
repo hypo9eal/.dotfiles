@@ -21,6 +21,12 @@ mv ~/.zprofile ~/.zprofile.bk
 ln -s ${DOTFILES_ROOT}/.zprofile ~/.zprofile
 mv ~/.zshrc ~/.zshrc.bk
 ln -s ${DOTFILES_ROOT}/.zshrc ~/.zshrc
+mv ~/.zlogin ~/.zlogin.bk
+ln -s ${DOTFILES_ROOT}/.zprezto/runcoms/zlogin ~/.zlogin
+mv ~/.zlogout ~/.zlogout.bk
+ln -s ${DOTFILES_ROOT}/.zprezto/runcoms/zlogout ~/.zlogout
+mv ~/.zshenv ~/.zshenv.bk
+ln -s ${DOTFILES_ROOT}/.zprezto/runcoms/zshenv ~/.zshenv
 
 echo "\n>> reload profile..."
 source ~/.zprofile
