@@ -17,3 +17,4 @@ alias update="sh ~/.dotfiles/update.sh"
 
 # curl
 alias curlj='curl -H "Accept: application/json" -H "Content-type: application/json"'
+source /usr/local/dev-env/ansible/mac_profile
