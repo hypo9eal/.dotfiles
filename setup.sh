@@ -62,4 +62,7 @@ ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight /usr/local
 echo "\n>> symbolic link ~/.dotfiles/.iterm -> ~/iterm"
 ln -s ${DOTFILES_ROOT}/.iterm ~/iterm
 
+echo "\n>> symbolic link /System/.../airport -> /usr/local/bin/airport"
+ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+
 exec $SHELL -l
