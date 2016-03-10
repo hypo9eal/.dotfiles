@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -84,6 +84,8 @@ export PATH=$PATH:/usr/local/var/anyenv/bin
 export ANYENV_ROOT=/usr/local/var/anyenv/
 eval "$(anyenv init -)"
 
-#ndenv
+# ndenv
 export PATH=$PATH:/usr/local/var/anyenv/envs/ndenv/shims/npm
 
+# direnv
+eval "$(direnv hook zsh)"

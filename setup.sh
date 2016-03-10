@@ -1,13 +1,23 @@
 #!/bin/zsh
 
-### vars
+#
+# Vars
+#
+
 DOTFILES_ROOT=~/.dotfiles
+
+#
+# Shell
+#
 
 echo "\n>> activate zsh..."
 chsh -s /bin/zsh
 # source ~/.zprofile
 
-### zprezto
+#
+# zprezto
+#
+
 echo "\n>> installing zprezto..."
 # zsh
 
@@ -31,9 +41,16 @@ ln -s ${DOTFILES_ROOT}/.zprezto/runcoms/zshenv ~/.zshenv
 echo "\n>> reload profile..."
 source ~/.zprofile
 
-### IFTTT dash
+#
+# IFTTT dash
+#
+
 echo "\n>> installing dash..."
 curl -fsSL https://raw.githubusercontent.com/IFTTT/dash/master/bin/bootstrap | bash
+
+#
+# *env
+#
 
 ### anyenv
 echo "\n>> installing anyenv..."
@@ -42,11 +59,36 @@ git clone https://github.com/riywo/anyenv /usr/local/var/anyenv
 echo "\n>> reload profile..."
 source ~/.zprofile
 
+# direnv
+echo "\n>> installing direnv..."
+brew install direnv
+
+
+#
+# Node.js
+#
+
 ### ndenv
 echo "\n>> installing ndenv..."
 anyenv install ndenv
 
-### symbolic link
+#
+# Python
+#
+
+### pyenv
+echo "\n>> installing pyenv..."
+anyenv install pyenv
+
+### virtualenv
+echo "\n>> installing virtualenv..."
+pip install --upgrade pip
+pip install virtualenv
+
+#
+# Symlink
+#
+
 echo "\n>> symbolic link ~/.vimrc -> ${DOTFILES_ROOT}/.vimrc"
 ln -s ${DOTFILES_ROOT}/.vimrc ~/.vimrc
 
