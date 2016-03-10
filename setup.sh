@@ -107,4 +107,7 @@ ln -s ${DOTFILES_ROOT}/.iterm ~/iterm
 echo "\n>> symbolic link /System/.../airport -> /usr/local/bin/airport"
 ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 
+echo "\n>> symbolic link ~/.dotfiles/.direnvrc -> ~/.direnvrc"
+ln -s ${DOTFILES_ROOT}/.direnvrc ~/.direnvrc
+
 exec $SHELL -l
