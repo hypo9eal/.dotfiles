@@ -1,4 +1,16 @@
 "*":
+  "api-docs":
+    _theme: "Dark"
+    chai: true
+    express: true
+    jquery: true
+    mocha: true
+    mongoose: true
+    node: true
+    "node~4_lts": true
+    sass: true
+    socketio: true
+  "asciidoc-preview": {}
   core:
     themes: [
       "one-dark-ui"
