@@ -22,6 +22,18 @@
 # * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 #
 # This file uses CoffeeScript Object Notation (CSON).
-# If you are unfamiliar with CSON, you can read more about it in the 
+# If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'atom-text-editor:not([mini])':
+  'ctrl-shift-M': 'unset!'
+
+'atom-workspace, atom-workspace atom-text-editor':
+  'ctrl-shift-M': 'unset!'
+
+'atom-text-editor[data-grammar^="source css scss"]':
+  'ctrl-shift-M': 'emmet:merge-lines'
+
+'atom-text-editor[data-grammar^="source gfm"]':
+  'ctrl-shift-M': 'markdown-preview:toggle'

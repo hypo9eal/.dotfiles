@@ -32,13 +32,13 @@
   "linter-htmlhint": {}
   "linter-scss-lint": {}
   livereload: {}
+  "markdown-preview": {}
   minimap: {}
   "one-dark-ui": {}
   "symbols-tree-view": {}
   "tree-view":
     hideVcsIgnoredFiles: true
-  "vim-mode":
-    useClipboardAsDefaultRegister: true
+  "vim-mode": {}
   "vim-surround": {}
   welcome:
     showOnStartup: false
