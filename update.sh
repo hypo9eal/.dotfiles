@@ -1,11 +1,17 @@
 echo ">> brew update..."
 brew update
 
+echo ">> brew upgrade..."
+brew upgrade
+
 echo ">> brew doctor..."
 brew doctor
 
 echo ">> brew cask update..."
 brew cask update
+
+echo ">> brew cask cleanup..."
+brew cask cleanup
 
 echo ">> brew cask doctor..."
 brew cask doctor
