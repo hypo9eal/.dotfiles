@@ -7,9 +7,6 @@ brew upgrade
 echo ">> brew doctor..."
 brew doctor
 
-echo ">> brew cask update..."
-brew cask update
-
 echo ">> brew cask cleanup..."
 brew cask cleanup
 
@@ -24,3 +21,6 @@ gem update
 
 echo ">> apm update..."
 apm update
+
+echo ">> apm clean..."
+apm clean
