@@ -77,7 +77,7 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 export PATH=$PATH:/usr/local/dev-env/bin
 
 # homebrew cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 
 # anyenv
 export PATH=$PATH:/usr/local/var/anyenv/bin
